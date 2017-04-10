@@ -167,7 +167,7 @@ REGEXEN['numeric_only'] = re.compile(r'^[\d]+$')
 REGEXEN['valid_mention_preceding_chars'] = re.compile(r'(?:[^a-zA-Z0-9_!#\$%&*@＠]|^|RT:?)')
 REGEXEN['at_signs'] = re.compile(r'[@＠]')
 REGEXEN['valid_mention_or_list'] = re.compile(
-    r'(%s)' % REGEXEN['valid_mention_preceding_chars'].pattern.decode('utf-8') +   # preceding character
+    r'(%s)' % REGEXEN['valid_mention_preceding_chars'].pattern +                   # preceding character
     r'(%s)' % REGEXEN['at_signs'].pattern +                                        # at mark
     r'([a-zA-Z0-9_]{1,20})' +                                                      # screen name
     r'(\/[a-zA-Z][a-zA-Z0-9_\-]{0,24})?'                                           # list (optional)
